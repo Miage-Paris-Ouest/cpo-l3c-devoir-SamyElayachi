@@ -1,3 +1,8 @@
+package main;
+
+import modele.SalleCinema;
+
+
 public class Main {
 
     public static void main(String[] args) {
