@@ -30,7 +30,6 @@ public class SalleCinema {
     }
 
     public void vendrePlace(){
-        this.nbPlaces--;
         this.nbPlacesVendus++;
     }
 
@@ -56,11 +55,12 @@ public class SalleCinema {
 
     public String toString(){
         StringBuffer a=new StringBuffer("");
-        a.append("Film projete        : "+ this.film+"\n");
-        a.append("Tarif               : "+ this.tarif+"\n");
-        a.append("Nombre de places    : "+this.nbPlaces+"\n");
-        a.append("Taux de remplissage : "+Math.round(tauxRemplissage()*(1.0/0.0001))/(1.0/0.0001)+"\n");
-        a.append("chiffre d'affaire   : "+chiffreAffaire());
+        a.append("Film projete                   : "+ this.film+"\n");
+        a.append("Tarif                          : "+ this.tarif+"\n");
+        a.append("Nombre de places               : "+ this.nbPlaces+"\n");
+        a.append("Nombre de places disponibles   : "+nbPlacesDisponible()+"\n");
+        a.append("Taux de remplissage            : "+Math.round(tauxRemplissage()*(1.0/0.0001))/(1.0/0.0001)+"\n");
+        a.append("chiffre d'affaire              : "+chiffreAffaire());
         return a.toString();
     }
 }
